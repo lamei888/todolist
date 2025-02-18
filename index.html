@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Priority Todo List with Timer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Priority Todo List</h1>
+    
+    <div class="add-task">
+      <input type="text" id="taskInput" placeholder="Enter task...">
+      <select id="prioritySelect">
+        <option value="high">High Priority</option>
+        <option value="medium">Medium Priority</option>
+        <option value="low">Low Priority</option>
+      </select>
+      <button onclick="addTask()">Add Task</button>
+    </div>
+
+    <div class="timer-section">
+      <h2>Current Task Timer</h2>
+      <div id="currentTask">No task selected</div>
+      <div id="timer">00:00:00</div>
+      <button id="startTimer" onclick="startTimer()">Start Timer</button>
+      <button id="completeTask" onclick="completeTask()">Complete Task</button>
+    </div>
+
+    <div class="lists-container">
+      <div class="priority-list">
+        <h3>High Priority</h3>
+        <ul id="highPriority" class="todo-list"></ul>
+      </div>
+      
+      <div class="priority-list">
+        <h3>Medium Priority</h3>
+        <ul id="mediumPriority" class="todo-list"></ul>
+      </div>
+      
+      <div class="priority-list">
+        <h3>Low Priority</h3>
+        <ul id="lowPriority" class="todo-list"></ul>
+      </div>
+    </div>
+
+    <div class="completed-tasks">
+      <div class="completed-header">
+        <h2>Completed Tasks</h2>
+        <button onclick="downloadCompletedTasks()">Download Tasks</button>
+      </div>
+      <ul id="completedList"></ul>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
